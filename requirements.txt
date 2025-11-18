@@ -1,0 +1,3 @@
+matplotlib
+tkinter  # Note: tkinter is built-in with Python, but listed for clarity
+sqlite3  # Built-in

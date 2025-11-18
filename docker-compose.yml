@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  cowrie:
+    build: ./cowrie
+    ports:
+      - "2222:2222"  # SSH honeypot on port 2222
+      - "23:23"      # Telnet honeypot on port 23
+    volumes:
+      - ./logs/cowrie:/cowrie/cowrie-git/var/log/cowrie  # Mount logs directory
+    restart: unless-stopped
